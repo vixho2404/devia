@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Visión Digital, Nuestra Realidad | Dev IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2C3E50;
+            color: #ECF0F1;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .accent-color {
+            color: #1ABC9C;
+        }
+        .accent-bg {
+            background-color: #1ABC9C;
+        }
+        .card {
+            background-color: #34495E;
+            border: 1px solid #4A6572;
+        }
+        .flow-step {
+            border-color: #1ABC9C;
+        }
+        .flow-arrow {
+            color: #1ABC9C;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <header class="text-center my-12 md:my-20">
+            <img src="./DEV IA WEB DEVELOPMENT (1).png" alt="Logo de Dev IA" class="h-60 md:h-80 mx-auto mb-8">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">
+                Tu <span class="accent-color">visión digital</span>, nuestra realidad.
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                Transformamos tus ideas en soluciones web potentes y a medida. Descubre cómo te guiamos en cada paso para impulsar tu negocio, ya sea atrayendo turistas o aumentando tus ventas en línea.
+            </p>
+        </header>
+
+        <section id="goals" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Tu meta es nuestra prioridad</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card rounded-lg shadow-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-4">✈️</div>
+                    <h3 class="text-2xl font-bold mb-3 accent-color">Negocios y Turismo</h3>
+                    <p class="text-gray-300">Creamos experiencias digitales inmersivas que capturan la esencia de tu destino y atraen a más visitantes.</p>
+                    <ul class="mt-4 text-left list-inside list-disc text-gray-300 space-y-2">
+                        <li>Atraer visitantes y promocionar tu destino.</li>
+                        <li>Llegar a más público y generar reservas.</li>
+                        <li>Mostrar tu oferta de forma atractiva y profesional.</li>
+                    </ul>
+                </div>
+                <div class="card rounded-lg shadow-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-6xl mb-4">🛒</div>
+                    <h3 class="text-2xl font-bold mb-3 accent-color">E-commerce y Ventas</h3>
+                    <p class="text-gray-300">Desarrollamos tiendas online robustas, seguras y optimizadas para convertir visitantes en clientes fieles.</p>
+                     <ul class="mt-4 text-left list-inside list-disc text-gray-300 space-y-2">
+                        <li>Aumentar tus ventas y expandir tu negocio.</li>
+                        <li>Tener una tienda virtual abierta 24/7.</li>
+                        <li>Gestionar productos y pagos de forma sencilla.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="my-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Nuestro Proceso: Sencillo y Transparente</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="flow-step w-24 h-24 rounded-full border-4 flex items-center justify-center text-4xl accent-bg text-white shadow-lg">💬</div>
+                    <h4 class="font-bold mt-4 text-lg">1. Entrevista y Estrategia</h4>
+                    <p class="text-sm text-gray-400 max-w-xs">Te escuchamos para entender tu visión y público objetivo.</p>
+                </div>
+                <div class="hidden md:block flow-arrow text-4xl font-light mx-4">→</div>
+                 <div class="block md:hidden flow-arrow text-4xl font-light my-4">↓</div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="flow-step w-24 h-24 rounded-full border-4 flex items-center justify-center text-4xl accent-bg text-white shadow-lg">🎨</div>
+                    <h4 class="font-bold mt-4 text-lg">2. Diseño y Planificación</h4>
+                    <p class="text-sm text-gray-400 max-w-xs">Creamos maquetas visuales para que veas el diseño antes de empezar.</p>
+                </div>
+                <div class="hidden md:block flow-arrow text-4xl font-light mx-4">→</div>
+                 <div class="block md:hidden flow-arrow text-4xl font-light my-4">↓</div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="flow-step w-24 h-24 rounded-full border-4 flex items-center justify-center text-4xl accent-bg text-white shadow-lg">💻</div>
+                    <h4 class="font-bold mt-4 text-lg">3. Desarrollo</h4>
+                    <p class="text-sm text-gray-400 max-w-xs">Construimos la web funcional, rápida y optimizada.</p>
+                </div>
+                <div class="hidden md:block flow-arrow text-4xl font-light mx-4">→</div>
+                 <div class="block md:hidden flow-arrow text-4xl font-light my-4">↓</div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="flow-step w-24 h-24 rounded-full border-4 flex items-center justify-center text-4xl accent-bg text-white shadow-lg">🚀</div>
+                    <h4 class="font-bold mt-4 text-lg">4. Lanzamiento y Guía</h4>
+                    <p class="text-sm text-gray-400 max-w-xs">Ponemos tu web en línea y te capacitamos para que la administres.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="my-20">
+            <h2 class="text-3xl font-bold text-center mb-10">El Impacto de una Web Profesional</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">Tu sitio web es mucho más que una tarjeta de presentación. Es una inversión estratégica que genera resultados medibles y construye la reputación de tu marca.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 accent-color">Optimización para Móviles</h3>
+                    <div class="chart-container">
+                        <canvas id="mobileChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-center text-gray-300">El 80% de las búsquedas se realizan desde dispositivos móviles. Garantizamos una experiencia perfecta en cualquier pantalla.</p>
+                </div>
+                <div class="card rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 accent-color">Experiencia de Usuario (UX)</h3>
+                     <div class="chart-container">
+                        <canvas id="uxChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-center text-gray-300">Un diseño intuitivo no solo retiene a los visitantes, sino que los convierte en clientes. Una buena UX puede duplicar las tasas de conversión.</p>
+                </div>
+                <div class="card rounded-lg shadow-xl p-6 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-center mb-4 accent-color">Credibilidad y Confianza</h3>
+                     <div class="chart-container">
+                        <canvas id="credibilityChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-center text-gray-300">El 75% de los consumidores juzga la credibilidad de una empresa por el diseño de su web. Un sitio profesional es tu mejor carta de presentación.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="why-us" class="my-20">
+            <h2 class="text-3xl font-bold text-center mb-12">¿Por Qué Elegirnos? Tu Éxito es Nuestro Compromiso.</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card rounded-lg p-6 text-center">
+                    <div class="text-5xl mb-3">🤝</div>
+                    <h4 class="font-bold text-lg accent-color">Guía Personalizada</h4>
+                    <p class="text-sm text-gray-300 mt-2">Te acompañamos en cada decisión para que tu web refleje tu marca a la perfección.</p>
+                </div>
+                 <div class="card rounded-lg p-6 text-center">
+                    <div class="text-5xl mb-3">💡</div>
+                    <h4 class="font-bold text-lg accent-color">Diseño a Medida</h4>
+                    <p class="text-sm text-gray-300 mt-2">Cada proyecto es único, diseñado desde cero para tus necesidades específicas.</p>
+                </div>
+                 <div class="card rounded-lg p-6 text-center">
+                    <div class="text-5xl mb-3">📢</div>
+                    <h4 class="font-bold text-lg accent-color">Comunicación Constante</h4>
+                    <p class="text-sm text-gray-300 mt-2">Mantenemos un canal de comunicación abierto y claro durante todo el proyecto.</p>
+                </div>
+                 <div class="card rounded-lg p-6 text-center">
+                    <div class="text-5xl mb-3">📈</div>
+                    <h4 class="font-bold text-lg accent-color">Enfoque en Resultados</h4>
+                    <p class="text-sm text-gray-300 mt-2">Nuestro objetivo es que tu inversión se traduzca en crecimiento real para tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center my-16">
+            <h2 class="text-3xl md:text-4xl font-black">Construyamos tu <span class="accent-color">futuro digital.</span></h2>
+            <p class="mt-4 text-lg text-gray-300">Es hora de llevar tu negocio al siguiente nivel.</p>
+            <a href="mailto:iadev829@gmail.com" class="mt-8 inline-block accent-bg text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-80 transition-colors">
+                Contáctanos para una consulta gratuita
+            </a>
+            <div class="mt-8 text-gray-400">
+                <p>Email: iadev829@gmail.com | Teléfono: +56 9 6232 9617</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/devia.4d" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    <a href="https://www.facebook.com/share/19LpQzCx4V/" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                    <a href="https://www.tiktok.com/@devia.4d?_t=ZM-8ypVaEWLWIH&_r=1" class="text-gray-400 hover:text-white transition-colors">TikTok</a>
+                </div>
+
+                <p class="mt-2 text-sm">© 2025 Dev IA. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const chartTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: '#ECF0F1'
+                    }
+                }
+            }
+        };
+
+        const mobileCtx = document.getElementById('mobileChart').getContext('2d');
+        new Chart(mobileCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Móvil', 'Escritorio'],
+                datasets: [{
+                    label: 'Uso de Dispositivos',
+                    data: [80, 20],
+                    backgroundColor: ['#1ABC9C', '#34495E'],
+                    borderColor: '#2C3E50',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                ...chartTooltipOptions
+            }
+        });
+
+        const credibilityCtx = document.getElementById('credibilityChart').getContext('2d');
+        new Chart(credibilityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Juzga por diseño', 'No juzga por diseño'],
+                datasets: [{
+                    label: 'Credibilidad por Diseño Web',
+                    data: [75, 25],
+                    backgroundColor: ['#1ABC9C', '#34495E'],
+                    borderColor: '#2C3E50',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                ...chartTooltipOptions
+            }
+        });
+
+        const uxCtx = document.getElementById('uxChart').getContext('2d');
+        new Chart(uxCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Web con Mala UX', 'Web con Buena UX'],
+                datasets: [{
+                    label: 'Aumento de Conversión',
+                    data: [100, 200],
+                    backgroundColor: ['#34495E', '#1ABC9C'],
+                    borderColor: ['#4A6572', '#16a085'],
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#ECF0F1'
+                        },
+                        grid: {
+                            color: 'rgba(236, 240, 241, 0.1)'
+                        }
+                    },
+                    x: {
+                       ticks: {
+                            color: '#ECF0F1'
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                ...chartTooltipOptions
+            }
+        });
+    </script>
+</body>
+</html>
